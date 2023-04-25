@@ -59,7 +59,7 @@ export default function Terrain() {
   return (
     <>
       <EffectComposer>
-        <SelectiveBloom selection={[mesh]} luminanceThreshold={0} intensity={20} luminanceSmoothing={0.9} height={300} />
+        <SelectiveBloom selection={[mesh]} luminanceThreshold={0} intensity={10} luminanceSmoothing={0.9} height={300} />
         <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} />
       </EffectComposer>
       <Sparkles

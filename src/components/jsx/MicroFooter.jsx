@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function MicroFooter() {
   return (
-    <div className="flex flex-row justify-between items-center absolute bottom-2 left-2 w-[calc(100%-1rem)] z-30">
-      <div className="text-center xs:text-left">© 2023 Entropic Software. All rights reserved.</div>
+    <div className="flex flex-col sm:flex-row justify-between items-center absolute bottom-2 left-2 w-[calc(100%-1rem)] z-30">
+      <div className="text-center mb-4 sm:mb-0 xs:text-left">© 2023 Entropic Software. All rights reserved.</div>
       <Link href={"/"}>
         <div className="relative top-0.5">
           <span 
