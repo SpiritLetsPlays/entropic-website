@@ -1,14 +1,13 @@
 import { Canvas } from "@react-three/fiber";
 import Lights from "./Lights";
 import Terrain from "./Terrain";
-import Controls from "./Controls";
+//import Controls from "./Controls";
 
 export default function Scene() {
   return (
-    <Canvas camera={{ zoom: 40, position: [0, 0, 500]}}>
+    <Canvas dpr={[1, 2]} camera={{ zoom: 70, position: [550, 450, 450] }}>
       <Lights />
       <Terrain />
-      <Controls />
     </Canvas>
   )
 }
