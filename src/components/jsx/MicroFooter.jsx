@@ -10,7 +10,7 @@ export default function MicroFooter() {
       <Link href={"/"} className={router.asPath === "7" && "hidden"}>
         <div className="relative top-0.5">
           <span 
-            className="text-lg bioweapon-font relative mb-8 xl:mb-0 xl:mr-4"
+            className="text-lg bioweapon-font relative mb-8 xl:mb-0 mr-4"
             style={{ fontWeight: "900", lineHeight: 1 }}
           >
             ENTROPIC
