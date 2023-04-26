@@ -62,28 +62,6 @@ export default function Terrain() {
         <SelectiveBloom selection={[mesh]} luminanceThreshold={0} intensity={10} luminanceSmoothing={0.9} height={300} />
         <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} />
       </EffectComposer>
-      <Sparkles
-        count={500}
-        speed={0.05}
-        opacity={0.75}
-        color={new THREE.Color("#fc034e")}
-        size={1}
-        scale={65}
-        noise={1}
-        position={[0, 0, 0]}
-        renderOrder={0}
-      />
-      <Sparkles
-        count={500}
-        speed={0.05}
-        opacity={0.75}
-        color={new THREE.Color("#54077d")}
-        size={1}
-        scale={65}
-        noise={1}
-        position={[0, 0, 0]}
-        renderOrder={0}
-      />
       <mesh position={[-12,-12,0]} ref={mesh} onUpdate={doUpdate} rotation={[-Math.PI / 2, 0, 0]} renderOrder={1} >
         <planeBufferGeometry ref={geometryRef} attach="geometry" args={[75, 30, 75, 75]} />
         <meshPhongMaterial
