@@ -37,10 +37,6 @@ export default function Terrain() {
     pos.needsUpdate = true;
   };
 
-  useEffect(() => {
-    console.log(mesh.current);
-  }, []);
-
   useFrame((state) => {
     if (!geometryRef.current) return;
     const t = Math.sin(state.clock.getElapsedTime()) * 1.5;
