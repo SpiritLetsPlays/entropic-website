@@ -6,14 +6,15 @@ import {
   SelectiveBloom,
 } from "@react-three/postprocessing";
 import * as THREE from "three";
+import { getGPUTier } from 'detect-gpu';
 
 import { noise } from "./perlin";
 import { GradientTexture } from "@react-three/drei";
 
 export default function Terrain() {
+  const [ gpuTier, setGPUTier ] = useState(0);
   const mesh = useRef();
   const geometryRef = useRef();
-  const vec = new THREE.Vector3();
 
   // Randomization used here from: https://codepen.io/ptc24/pen/BpXbOW?editors=1010
   const doUpdate = ({ geometry }) => {
@@ -39,7 +40,7 @@ export default function Terrain() {
   };
 
   useFrame((state) => {
-    if (!geometryRef.current) return;
+    if (!geometryRef.current || gpuTier <= 1) return;
     const t = Math.sin(state.clock.getElapsedTime()) * 1.5;
     const tc = Math.cos(state.clock.getElapsedTime()) * 1.5;
     let pos = geometryRef.current.getAttribute("position");
@@ -60,6 +61,15 @@ export default function Terrain() {
     }
     pos.needsUpdate = true;
   });
+
+  const fetchGPUTier = async () => {
+    const gpuTier = await getGPUTier();
+    setGPUTier(gpuTier.tier);
+  };
+
+  useEffect(() => {
+    fetchGPUTier();
+  }, []);
 
   return (
     <>
