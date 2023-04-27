@@ -5,7 +5,7 @@ export default function MicroFooter() {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col sm:flex-row justify-between items-center absolute bottom-2 left-2 w-[calc(100%-1rem)] z-30">
+    <div className="flex flex-col sm:flex-row justify-between items-center fixed bottom-2 left-2 w-[calc(100%-1rem)] z-30">
       <div
         className={`text-center ${
           router.asPath !== "/" && "mb-2"

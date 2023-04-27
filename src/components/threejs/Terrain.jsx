@@ -13,6 +13,7 @@ import { GradientTexture } from "@react-three/drei";
 export default function Terrain() {
   const mesh = useRef();
   const geometryRef = useRef();
+  const vec = new THREE.Vector3();
 
   // Randomization used here from: https://codepen.io/ptc24/pen/BpXbOW?editors=1010
   const doUpdate = ({ geometry }) => {
@@ -63,14 +64,7 @@ export default function Terrain() {
   return (
     <>
       <EffectComposer>
-        <SelectiveBloom
-          selection={[mesh]}
-          luminanceThreshold={0}
-          intensity={10}
-          luminanceSmoothing={0.9}
-          height={300}
-        />
-        <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} />
+        <Bloom luminanceThreshold={0} intensity={8} luminanceSmoothing={0.9} height={300} />
       </EffectComposer>
       <mesh
         position={[-12, -12, 0]}
@@ -79,28 +73,11 @@ export default function Terrain() {
         rotation={[-Math.PI / 2, 0, 0]}
         renderOrder={1}
       >
-        <planeBufferGeometry
+        <planeGeometry
           ref={geometryRef}
           attach="geometry"
           args={[75, 30, 75, 75]}
         />
-        {/*<meshPhongMaterial
-          shininess={3}
-          flatShading
-          color={"white"}
-          wireframe={true}
-          transparent
-          wireframeLinewidth={0.7}
-        >
-          <GradientTexture
-            stops={[0, 1]} // As many stops as you want
-            colors={["#fc034e", "#33034d"]} // Colors need to match the number of stops
-            size={1024} // Size is optional, default = 1024
-            minFilter={THREE.LinearFilter}
-            magFilter={THREE.LinearFilter}
-          />
-        </meshPhongMaterial>*/}
-
         <meshBasicMaterial
           shininess={3}
           flatShading

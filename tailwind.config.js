@@ -13,8 +13,13 @@ module.exports = {
       screens: {
         xs: '475px',
         '2xs': '375px',
-      }
-    }
+      },
+      colors: {
+        "scrollbar-bg": "#141414",
+        "scrollbar-thumb-bg": "#323232",
+        "scrollbar-thumb-hover": "#484848",
+      },
+    },
   },
   plugins: [],
 }
