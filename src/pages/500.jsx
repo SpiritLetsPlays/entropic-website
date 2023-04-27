@@ -9,7 +9,7 @@ export default function Custom500() {
           500
           <span className="font-mirror-layer" />
         </span>
-        <span className="text-white 2xs:text-xl xs:text-2xl md:text-3xl mx-auto">Looks like our servers were consumed by a black hole.<br />Don't worry, we're working on it.</span>
+        <span className="2xs:text-xl xs:text-2xl md:text-3xl mx-auto block font-bold text-gray-300">Looks like our servers were consumed by a black hole.<br />Don't worry, we're working on it.</span>
       </div>
     </div>
   )

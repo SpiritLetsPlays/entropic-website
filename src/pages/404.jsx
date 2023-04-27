@@ -9,7 +9,7 @@ export default function Custom404() {
           404
           <span className="font-mirror-layer" />
         </span>
-        <span className="text-white 2xs:text-xl xs:text-2xl md:text-3xl mx-auto">Seems like you fell into the void. <br />Let's get you back on track.</span>
+        <span className="2xs:text-xl xs:text-2xl md:text-3xl mx-auto block font-bold text-gray-300">Seems like you fell into the void. <br />Let's get you back on track.</span>
       </div>
     </div>
   )
