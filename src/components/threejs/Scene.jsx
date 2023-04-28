@@ -27,7 +27,6 @@ export default function Scene() {
     async function handleScroll() {
       const scroll = window.scrollY;
       const newPos = [550, 450, 450 + scroll / 30];
-      console.log(newPos);
       setPos(newPos);
     }
     

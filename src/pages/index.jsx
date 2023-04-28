@@ -31,6 +31,13 @@ export default function Home() {
           <span className="block text-sm sm:text-md font-light mb-0 text-gray-700">And more coffee.</span>
         </div>
       </div>
+      <div className={`flex flex-col sm:flex-row justify-between pb-4 mb-2 items-center w-[calc(100%-1rem)] z-30`}>
+        <div
+          className={`text-center sm:mb-0 xs:text-left sm:mr-auto`}
+        >
+          <span>© 2023 Entropic Software. All rights reserved.</span>
+        </div>
+      </div>
     </>
   )
 }
