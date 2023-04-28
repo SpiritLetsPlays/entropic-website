@@ -20,7 +20,7 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full h-full flex flex-col items-center justify-center text-left z-30">
-        <div className="w-4/5 flex flex-col xl:block text-center pointer-events-auto">
+        <div className="w-5/6 flex flex-col xl:block text-center pointer-events-auto">
           <span className="text-2xl sm:text-3xl block font-bold text-gray-300 mb-2">
             We're a small team based in Central Europe, bringing websites and software to life.<br />
           </span>
@@ -31,7 +31,7 @@ export default function Home() {
           <span className="block text-sm sm:text-md font-light mb-0 text-gray-700">And more coffee.</span>
         </div>
       </div>
-      <div className={`flex flex-col sm:flex-row justify-between pb-4 mb-2 items-center w-[calc(100%-1rem)] z-30`}>
+      <div className={`flex flex-col sm:hidden justify-between pb-4 mb-2 items-center w-[calc(100%-1rem)] z-30`}>
         <div
           className={`text-center sm:mb-0 xs:text-left sm:mr-auto`}
         >
