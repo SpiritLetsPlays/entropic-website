@@ -2,6 +2,10 @@ import { Suspense } from "react";
 import Scene from "../threejs/Scene";
 import MicroFooter from "./MicroFooter";
 
+import { Montserrat } from 'next/font/google'
+
+const montserrat = Montserrat({ subsets: ['latin'], weight: "variable" });
+
 export default function Layout({ children }) {
   const SuspenseFallback = () => {
     return (
@@ -12,7 +16,7 @@ export default function Layout({ children }) {
   return (
     <>
       <div 
-        className="w-full h-full border fixed top-0 left-0 z-20 noise opacity-50 mix-blend-overlay pointer-events-none" 
+        className={`w-full h-full border fixed top-0 left-0 z-20 noise opacity-50 mix-blend-overlay pointer-events-none ${montserrat.className}`}
         style={{ backgroundImage: "url('/noise.webp')" }}
       />
       <div className="w-full h-full absolute top-0 left-0 z-30 pointer-events-none">

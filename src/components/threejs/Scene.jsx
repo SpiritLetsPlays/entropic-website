@@ -1,9 +1,8 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import Lights from "./Lights";
 import Terrain from "./Terrain";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import * as THREE from "three";
-//import Controls from "./Controls";
 
 function Camera({ pos }) {
   useFrame((state) => {

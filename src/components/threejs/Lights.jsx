@@ -1,13 +1,4 @@
 export default function Lights() {
-  const FakeSphere = () => {
-    return (
-      <mesh>
-        <sphereBufferGeometry attach={"geometry"} args={[0.7, 30, 30]} />
-        <meshBasicMaterial attach={"material"} color={0xfff1ef} />
-      </mesh>
-    );
-  };
-
   return (
     <group>
       <ambientLight position={[0, 4, 0]} intensity={0.3} />

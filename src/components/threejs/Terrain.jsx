@@ -2,8 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import {
   EffectComposer,
-  Bloom,
-  SelectiveBloom,
+  Bloom
 } from "@react-three/postprocessing";
 import * as THREE from "three";
 import { getGPUTier } from 'detect-gpu';
@@ -108,5 +107,3 @@ export default function Terrain() {
     </>
   );
 }
-
-// TODO: Figure out wireframe thickness, make galaxy background with particles
